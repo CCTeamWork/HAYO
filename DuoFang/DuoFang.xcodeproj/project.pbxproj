@@ -10,7 +10,6 @@
 		5F7D12317B8684BA93CB583A /* libPods-DuoFang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0166B36D11D3021143A932A7 /* libPods-DuoFang.a */; };
 		D7E40F6B1E83F876009CD3AF /* LoginOrRegist.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */; };
 		D7E40F6E1E83F93B009CD3AF /* NIMServerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E40F6D1E83F93B009CD3AF /* NIMServerAPI.m */; };
-		D7E40F711E83F9A3009CD3AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E40F701E83F9A3009CD3AF /* ViewController.m */; };
 		F00D02C61E822E0C004C8CAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C51E822E0C004C8CAA /* main.m */; };
 		F00D02C91E822E0C004C8CAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C81E822E0C004C8CAA /* AppDelegate.m */; };
 		F00D02CF1E822E0C004C8CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00D02CD1E822E0C004C8CAA /* Main.storyboard */; };
@@ -19,6 +18,7 @@
 		F00D02DF1E822E0C004C8CAA /* DuoFangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02DE1E822E0C004C8CAA /* DuoFangTests.m */; };
 		F00D02EA1E822E0C004C8CAA /* DuoFangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02E91E822E0C004C8CAA /* DuoFangUITests.m */; };
 		F00D03041E82391C004C8CAA /* VideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D03031E82391C004C8CAA /* VideoController.m */; };
+		F024B77A1E83FA8A00D2485B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F024B7791E83FA8A00D2485B /* ViewController.m */; };
 		F0444CCF1E83CC79003B7736 /* color.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CA51E83CC79003B7736 /* color.c */; };
 		F0444CD01E83CC79003B7736 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CA61E83CC79003B7736 /* common.c */; };
 		F0444CD11E83CC79003B7736 /* rgb.fsh.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CA81E83CC79003B7736 /* rgb.fsh.c */; };
@@ -66,8 +66,6 @@
 		D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOrRegist.m; sourceTree = "<group>"; };
 		D7E40F6C1E83F93B009CD3AF /* NIMServerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMServerAPI.h; sourceTree = "<group>"; };
 		D7E40F6D1E83F93B009CD3AF /* NIMServerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMServerAPI.m; sourceTree = "<group>"; };
-		D7E40F6F1E83F9A3009CD3AF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D7E40F701E83F9A3009CD3AF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F00D02C11E822E0C004C8CAA /* DuoFang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoFang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00D02C51E822E0C004C8CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F00D02C71E822E0C004C8CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		F00D02EB1E822E0C004C8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00D03021E82391C004C8CAA /* VideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoController.h; sourceTree = "<group>"; };
 		F00D03031E82391C004C8CAA /* VideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoController.m; sourceTree = "<group>"; };
+		F024B7781E83FA8A00D2485B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F024B7791E83FA8A00D2485B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0444CA51E83CC79003B7736 /* color.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = color.c; sourceTree = "<group>"; };
 		F0444CA61E83CC79003B7736 /* common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
 		F0444CA81E83CC79003B7736 /* rgb.fsh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rgb.fsh.c; sourceTree = "<group>"; };
@@ -177,6 +177,8 @@
 		D7E40F681E83F86D009CD3AF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F024B7781E83FA8A00D2485B /* ViewController.h */,
+				F024B7791E83FA8A00D2485B /* ViewController.m */,
 				D7E40F6C1E83F93B009CD3AF /* NIMServerAPI.h */,
 				D7E40F6D1E83F93B009CD3AF /* NIMServerAPI.m */,
 				D7E40F691E83F876009CD3AF /* LoginOrRegist.h */,
@@ -214,8 +216,6 @@
 				F00D02FA1E8238E4004C8CAA /* Classes */,
 				F00D02C71E822E0C004C8CAA /* AppDelegate.h */,
 				F00D02C81E822E0C004C8CAA /* AppDelegate.m */,
-				D7E40F6F1E83F9A3009CD3AF /* ViewController.h */,
-				D7E40F701E83F9A3009CD3AF /* ViewController.m */,
 				F00D02CD1E822E0C004C8CAA /* Main.storyboard */,
 				F00D02D01E822E0C004C8CAA /* Assets.xcassets */,
 				F00D02D21E822E0C004C8CAA /* LaunchScreen.storyboard */,
@@ -562,7 +562,7 @@
 				F00D02C91E822E0C004C8CAA /* AppDelegate.m in Sources */,
 				F0E74E511E825A7C00CAEC66 /* PermissionTool.m in Sources */,
 				F0444CE11E83CC79003B7736 /* IJKSDLGLView.m in Sources */,
-				D7E40F711E83F9A3009CD3AF /* ViewController.m in Sources */,
+				F024B77A1E83FA8A00D2485B /* ViewController.m in Sources */,
 				F0444CD21E83CC79003B7736 /* yuv420p.fsh.c in Sources */,
 				F0444CD11E83CC79003B7736 /* rgb.fsh.c in Sources */,
 				F0444CCF1E83CC79003B7736 /* color.c in Sources */,
