@@ -1,0 +1,929 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F7D12317B8684BA93CB583A /* libPods-DuoFang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0166B36D11D3021143A932A7 /* libPods-DuoFang.a */; };
+		F00D02C61E822E0C004C8CAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C51E822E0C004C8CAA /* main.m */; };
+		F00D02C91E822E0C004C8CAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C81E822E0C004C8CAA /* AppDelegate.m */; };
+		F00D02CC1E822E0C004C8CAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02CB1E822E0C004C8CAA /* ViewController.m */; };
+		F00D02CF1E822E0C004C8CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00D02CD1E822E0C004C8CAA /* Main.storyboard */; };
+		F00D02D11E822E0C004C8CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00D02D01E822E0C004C8CAA /* Assets.xcassets */; };
+		F00D02D41E822E0C004C8CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00D02D21E822E0C004C8CAA /* LaunchScreen.storyboard */; };
+		F00D02DF1E822E0C004C8CAA /* DuoFangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02DE1E822E0C004C8CAA /* DuoFangTests.m */; };
+		F00D02EA1E822E0C004C8CAA /* DuoFangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02E91E822E0C004C8CAA /* DuoFangUITests.m */; };
+		F00D03041E82391C004C8CAA /* VideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D03031E82391C004C8CAA /* VideoController.m */; };
+		F0444CCF1E83CC79003B7736 /* color.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CA51E83CC79003B7736 /* color.c */; };
+		F0444CD01E83CC79003B7736 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CA61E83CC79003B7736 /* common.c */; };
+		F0444CD11E83CC79003B7736 /* rgb.fsh.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CA81E83CC79003B7736 /* rgb.fsh.c */; };
+		F0444CD21E83CC79003B7736 /* yuv420p.fsh.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CA91E83CC79003B7736 /* yuv420p.fsh.c */; };
+		F0444CD31E83CC79003B7736 /* yuv420sp.fsh.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CAA1E83CC79003B7736 /* yuv420sp.fsh.c */; };
+		F0444CD41E83CC79003B7736 /* yuv444p10le.fsh.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CAB1E83CC79003B7736 /* yuv444p10le.fsh.c */; };
+		F0444CD51E83CC79003B7736 /* renderer.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CAD1E83CC79003B7736 /* renderer.c */; };
+		F0444CD61E83CC79003B7736 /* renderer_rgb.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CAE1E83CC79003B7736 /* renderer_rgb.c */; };
+		F0444CD71E83CC79003B7736 /* renderer_yuv420p.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CAF1E83CC79003B7736 /* renderer_yuv420p.c */; };
+		F0444CD81E83CC79003B7736 /* renderer_yuv420sp.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CB01E83CC79003B7736 /* renderer_yuv420sp.c */; };
+		F0444CD91E83CC79003B7736 /* renderer_yuv420sp_vtb.m in Sources */ = {isa = PBXBuildFile; fileRef = F0444CB11E83CC79003B7736 /* renderer_yuv420sp_vtb.m */; };
+		F0444CDA1E83CC79003B7736 /* renderer_yuv444p10le.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CB21E83CC79003B7736 /* renderer_yuv444p10le.c */; };
+		F0444CDB1E83CC79003B7736 /* shader.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CB31E83CC79003B7736 /* shader.c */; };
+		F0444CDC1E83CC79003B7736 /* mvp.vsh.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CB51E83CC79003B7736 /* mvp.vsh.c */; };
+		F0444CDD1E83CC79003B7736 /* ijksdl_mutex.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CBF1E83CC79003B7736 /* ijksdl_mutex.c */; };
+		F0444CDE1E83CC79003B7736 /* ijksdl_stdinc.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CC11E83CC79003B7736 /* ijksdl_stdinc.c */; };
+		F0444CDF1E83CC79003B7736 /* ijksdl_timer.c in Sources */ = {isa = PBXBuildFile; fileRef = F0444CC41E83CC79003B7736 /* ijksdl_timer.c */; };
+		F0444CE01E83CC79003B7736 /* ijksdl_vout_overlay_videotoolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = F0444CCC1E83CC79003B7736 /* ijksdl_vout_overlay_videotoolbox.m */; };
+		F0444CE11E83CC79003B7736 /* IJKSDLGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0444CCE1E83CC79003B7736 /* IJKSDLGLView.m */; };
+		F0444CE41E83CF7B003B7736 /* NTESGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0444CE31E83CF7B003B7736 /* NTESGLView.m */; };
+		F0E74E511E825A7C00CAEC66 /* PermissionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E74E501E825A7C00CAEC66 /* PermissionTool.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F00D02DB1E822E0C004C8CAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F00D02B91E822E0C004C8CAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F00D02C01E822E0C004C8CAA;
+			remoteInfo = DuoFang;
+		};
+		F00D02E61E822E0C004C8CAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F00D02B91E822E0C004C8CAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F00D02C01E822E0C004C8CAA;
+			remoteInfo = DuoFang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0166B36D11D3021143A932A7 /* libPods-DuoFang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DuoFang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		691326DFE4D166E967FB56D2 /* Pods-DuoFang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoFang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DuoFang/Pods-DuoFang.debug.xcconfig"; sourceTree = "<group>"; };
+		F00D02C11E822E0C004C8CAA /* DuoFang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoFang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00D02C51E822E0C004C8CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F00D02C71E822E0C004C8CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F00D02C81E822E0C004C8CAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F00D02CA1E822E0C004C8CAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../ViewController.h; sourceTree = "<group>"; };
+		F00D02CB1E822E0C004C8CAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../ViewController.m; sourceTree = "<group>"; };
+		F00D02CE1E822E0C004C8CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F00D02D01E822E0C004C8CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F00D02D31E822E0C004C8CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F00D02D51E822E0C004C8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00D02DA1E822E0C004C8CAA /* DuoFangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuoFangTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00D02DE1E822E0C004C8CAA /* DuoFangTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuoFangTests.m; sourceTree = "<group>"; };
+		F00D02E01E822E0C004C8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00D02E51E822E0C004C8CAA /* DuoFangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuoFangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F00D02E91E822E0C004C8CAA /* DuoFangUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuoFangUITests.m; sourceTree = "<group>"; };
+		F00D02EB1E822E0C004C8CAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00D03021E82391C004C8CAA /* VideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoController.h; sourceTree = "<group>"; };
+		F00D03031E82391C004C8CAA /* VideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoController.m; sourceTree = "<group>"; };
+		F0444CA51E83CC79003B7736 /* color.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = color.c; sourceTree = "<group>"; };
+		F0444CA61E83CC79003B7736 /* common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
+		F0444CA81E83CC79003B7736 /* rgb.fsh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rgb.fsh.c; sourceTree = "<group>"; };
+		F0444CA91E83CC79003B7736 /* yuv420p.fsh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv420p.fsh.c; sourceTree = "<group>"; };
+		F0444CAA1E83CC79003B7736 /* yuv420sp.fsh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv420sp.fsh.c; sourceTree = "<group>"; };
+		F0444CAB1E83CC79003B7736 /* yuv444p10le.fsh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yuv444p10le.fsh.c; sourceTree = "<group>"; };
+		F0444CAC1E83CC79003B7736 /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		F0444CAD1E83CC79003B7736 /* renderer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = renderer.c; sourceTree = "<group>"; };
+		F0444CAE1E83CC79003B7736 /* renderer_rgb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = renderer_rgb.c; sourceTree = "<group>"; };
+		F0444CAF1E83CC79003B7736 /* renderer_yuv420p.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = renderer_yuv420p.c; sourceTree = "<group>"; };
+		F0444CB01E83CC79003B7736 /* renderer_yuv420sp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = renderer_yuv420sp.c; sourceTree = "<group>"; };
+		F0444CB11E83CC79003B7736 /* renderer_yuv420sp_vtb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = renderer_yuv420sp_vtb.m; sourceTree = "<group>"; };
+		F0444CB21E83CC79003B7736 /* renderer_yuv444p10le.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = renderer_yuv444p10le.c; sourceTree = "<group>"; };
+		F0444CB31E83CC79003B7736 /* shader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = shader.c; sourceTree = "<group>"; };
+		F0444CB51E83CC79003B7736 /* mvp.vsh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mvp.vsh.c; sourceTree = "<group>"; };
+		F0444CB61E83CC79003B7736 /* ijksdl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl.h; sourceTree = "<group>"; };
+		F0444CB71E83CC79003B7736 /* ijksdl_class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_class.h; sourceTree = "<group>"; };
+		F0444CB81E83CC79003B7736 /* ijksdl_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_endian.h; sourceTree = "<group>"; };
+		F0444CB91E83CC79003B7736 /* ijksdl_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_error.h; sourceTree = "<group>"; };
+		F0444CBA1E83CC79003B7736 /* ijksdl_fourcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_fourcc.h; sourceTree = "<group>"; };
+		F0444CBB1E83CC79003B7736 /* ijksdl_gles2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_gles2.h; sourceTree = "<group>"; };
+		F0444CBC1E83CC79003B7736 /* ijksdl_inc_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_inc_internal.h; sourceTree = "<group>"; };
+		F0444CBD1E83CC79003B7736 /* ijksdl_log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_log.h; sourceTree = "<group>"; };
+		F0444CBE1E83CC79003B7736 /* ijksdl_misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_misc.h; sourceTree = "<group>"; };
+		F0444CBF1E83CC79003B7736 /* ijksdl_mutex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ijksdl_mutex.c; sourceTree = "<group>"; };
+		F0444CC01E83CC79003B7736 /* ijksdl_mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_mutex.h; sourceTree = "<group>"; };
+		F0444CC11E83CC79003B7736 /* ijksdl_stdinc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ijksdl_stdinc.c; sourceTree = "<group>"; };
+		F0444CC21E83CC79003B7736 /* ijksdl_stdinc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_stdinc.h; sourceTree = "<group>"; };
+		F0444CC31E83CC79003B7736 /* ijksdl_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_thread.h; sourceTree = "<group>"; };
+		F0444CC41E83CC79003B7736 /* ijksdl_timer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ijksdl_timer.c; sourceTree = "<group>"; };
+		F0444CC51E83CC79003B7736 /* ijksdl_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_timer.h; sourceTree = "<group>"; };
+		F0444CC61E83CC79003B7736 /* ijksdl_video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_video.h; sourceTree = "<group>"; };
+		F0444CC71E83CC79003B7736 /* ijksdl_vout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_vout.h; sourceTree = "<group>"; };
+		F0444CC81E83CC79003B7736 /* ijksdl_vout_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_vout_internal.h; sourceTree = "<group>"; };
+		F0444CCA1E83CC79003B7736 /* ijksdl_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_ios.h; sourceTree = "<group>"; };
+		F0444CCB1E83CC79003B7736 /* ijksdl_vout_overlay_videotoolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ijksdl_vout_overlay_videotoolbox.h; sourceTree = "<group>"; };
+		F0444CCC1E83CC79003B7736 /* ijksdl_vout_overlay_videotoolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ijksdl_vout_overlay_videotoolbox.m; sourceTree = "<group>"; };
+		F0444CCD1E83CC79003B7736 /* IJKSDLGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKSDLGLView.h; sourceTree = "<group>"; };
+		F0444CCE1E83CC79003B7736 /* IJKSDLGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKSDLGLView.m; sourceTree = "<group>"; };
+		F0444CE21E83CF7B003B7736 /* NTESGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESGLView.h; sourceTree = "<group>"; };
+		F0444CE31E83CF7B003B7736 /* NTESGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESGLView.m; sourceTree = "<group>"; };
+		F0D52DF01E837A5800A19452 /* MSUPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSUPrefixHeader.pch; sourceTree = "<group>"; };
+		F0E74E4F1E825A7C00CAEC66 /* PermissionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermissionTool.h; sourceTree = "<group>"; };
+		F0E74E501E825A7C00CAEC66 /* PermissionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PermissionTool.m; sourceTree = "<group>"; };
+		F680876314D3EE3C78F9E0D0 /* Pods-DuoFang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoFang.release.xcconfig"; path = "Pods/Target Support Files/Pods-DuoFang/Pods-DuoFang.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F00D02BE1E822E0C004C8CAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F7D12317B8684BA93CB583A /* libPods-DuoFang.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00D02D71E822E0C004C8CAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00D02E21E822E0C004C8CAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C314B2E28FD71CA93890F38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0166B36D11D3021143A932A7 /* libPods-DuoFang.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		956472322DBE211B42B17A15 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				691326DFE4D166E967FB56D2 /* Pods-DuoFang.debug.xcconfig */,
+				F680876314D3EE3C78F9E0D0 /* Pods-DuoFang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F00D02B81E822E0C004C8CAA = {
+			isa = PBXGroup;
+			children = (
+				F00D02C31E822E0C004C8CAA /* DuoFang */,
+				F00D02DD1E822E0C004C8CAA /* DuoFangTests */,
+				F00D02E81E822E0C004C8CAA /* DuoFangUITests */,
+				F00D02C21E822E0C004C8CAA /* Products */,
+				956472322DBE211B42B17A15 /* Pods */,
+				0C314B2E28FD71CA93890F38 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F00D02C21E822E0C004C8CAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F00D02C11E822E0C004C8CAA /* DuoFang.app */,
+				F00D02DA1E822E0C004C8CAA /* DuoFangTests.xctest */,
+				F00D02E51E822E0C004C8CAA /* DuoFangUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F00D02C31E822E0C004C8CAA /* DuoFang */ = {
+			isa = PBXGroup;
+			children = (
+				F0444CA31E83CC79003B7736 /* ijksdl */,
+				F00D02FA1E8238E4004C8CAA /* Classes */,
+				F00D02C71E822E0C004C8CAA /* AppDelegate.h */,
+				F00D02C81E822E0C004C8CAA /* AppDelegate.m */,
+				F00D02CD1E822E0C004C8CAA /* Main.storyboard */,
+				F00D02D01E822E0C004C8CAA /* Assets.xcassets */,
+				F00D02D21E822E0C004C8CAA /* LaunchScreen.storyboard */,
+				F00D02D51E822E0C004C8CAA /* Info.plist */,
+				F00D02C41E822E0C004C8CAA /* Supporting Files */,
+			);
+			path = DuoFang;
+			sourceTree = "<group>";
+		};
+		F00D02C41E822E0C004C8CAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F00D02C51E822E0C004C8CAA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F00D02DD1E822E0C004C8CAA /* DuoFangTests */ = {
+			isa = PBXGroup;
+			children = (
+				F00D02DE1E822E0C004C8CAA /* DuoFangTests.m */,
+				F00D02E01E822E0C004C8CAA /* Info.plist */,
+			);
+			path = DuoFangTests;
+			sourceTree = "<group>";
+		};
+		F00D02E81E822E0C004C8CAA /* DuoFangUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F00D02E91E822E0C004C8CAA /* DuoFangUITests.m */,
+				F00D02EB1E822E0C004C8CAA /* Info.plist */,
+			);
+			path = DuoFangUITests;
+			sourceTree = "<group>";
+		};
+		F00D02FA1E8238E4004C8CAA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F0D52DB01E8377BC00A19452 /* Framework */,
+				F00D02FB1E8238E4004C8CAA /* GlobeClass */,
+				F00D02FD1E8238E4004C8CAA /* Login */,
+				F00D02FE1E8238E4004C8CAA /* Video */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F00D02FB1E8238E4004C8CAA /* GlobeClass */ = {
+			isa = PBXGroup;
+			children = (
+				F0E74E4F1E825A7C00CAEC66 /* PermissionTool.h */,
+				F0E74E501E825A7C00CAEC66 /* PermissionTool.m */,
+				F0D52DF01E837A5800A19452 /* MSUPrefixHeader.pch */,
+			);
+			path = GlobeClass;
+			sourceTree = "<group>";
+		};
+		F00D02FD1E8238E4004C8CAA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F00D02CA1E822E0C004C8CAA /* ViewController.h */,
+				F00D02CB1E822E0C004C8CAA /* ViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F00D02FE1E8238E4004C8CAA /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				F00D03021E82391C004C8CAA /* VideoController.h */,
+				F00D03031E82391C004C8CAA /* VideoController.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		F0444CA31E83CC79003B7736 /* ijksdl */ = {
+			isa = PBXGroup;
+			children = (
+				F0444CA41E83CC79003B7736 /* gles2 */,
+				F0444CB61E83CC79003B7736 /* ijksdl.h */,
+				F0444CB71E83CC79003B7736 /* ijksdl_class.h */,
+				F0444CB81E83CC79003B7736 /* ijksdl_endian.h */,
+				F0444CB91E83CC79003B7736 /* ijksdl_error.h */,
+				F0444CBA1E83CC79003B7736 /* ijksdl_fourcc.h */,
+				F0444CBB1E83CC79003B7736 /* ijksdl_gles2.h */,
+				F0444CBC1E83CC79003B7736 /* ijksdl_inc_internal.h */,
+				F0444CBD1E83CC79003B7736 /* ijksdl_log.h */,
+				F0444CBE1E83CC79003B7736 /* ijksdl_misc.h */,
+				F0444CBF1E83CC79003B7736 /* ijksdl_mutex.c */,
+				F0444CC01E83CC79003B7736 /* ijksdl_mutex.h */,
+				F0444CC11E83CC79003B7736 /* ijksdl_stdinc.c */,
+				F0444CC21E83CC79003B7736 /* ijksdl_stdinc.h */,
+				F0444CC31E83CC79003B7736 /* ijksdl_thread.h */,
+				F0444CC41E83CC79003B7736 /* ijksdl_timer.c */,
+				F0444CC51E83CC79003B7736 /* ijksdl_timer.h */,
+				F0444CC61E83CC79003B7736 /* ijksdl_video.h */,
+				F0444CC71E83CC79003B7736 /* ijksdl_vout.h */,
+				F0444CC81E83CC79003B7736 /* ijksdl_vout_internal.h */,
+				F0444CC91E83CC79003B7736 /* ios */,
+			);
+			path = ijksdl;
+			sourceTree = "<group>";
+		};
+		F0444CA41E83CC79003B7736 /* gles2 */ = {
+			isa = PBXGroup;
+			children = (
+				F0444CA51E83CC79003B7736 /* color.c */,
+				F0444CA61E83CC79003B7736 /* common.c */,
+				F0444CA71E83CC79003B7736 /* fsh */,
+				F0444CAC1E83CC79003B7736 /* internal.h */,
+				F0444CAD1E83CC79003B7736 /* renderer.c */,
+				F0444CAE1E83CC79003B7736 /* renderer_rgb.c */,
+				F0444CAF1E83CC79003B7736 /* renderer_yuv420p.c */,
+				F0444CB01E83CC79003B7736 /* renderer_yuv420sp.c */,
+				F0444CB11E83CC79003B7736 /* renderer_yuv420sp_vtb.m */,
+				F0444CB21E83CC79003B7736 /* renderer_yuv444p10le.c */,
+				F0444CB31E83CC79003B7736 /* shader.c */,
+				F0444CB41E83CC79003B7736 /* vsh */,
+			);
+			path = gles2;
+			sourceTree = "<group>";
+		};
+		F0444CA71E83CC79003B7736 /* fsh */ = {
+			isa = PBXGroup;
+			children = (
+				F0444CA81E83CC79003B7736 /* rgb.fsh.c */,
+				F0444CA91E83CC79003B7736 /* yuv420p.fsh.c */,
+				F0444CAA1E83CC79003B7736 /* yuv420sp.fsh.c */,
+				F0444CAB1E83CC79003B7736 /* yuv444p10le.fsh.c */,
+			);
+			path = fsh;
+			sourceTree = "<group>";
+		};
+		F0444CB41E83CC79003B7736 /* vsh */ = {
+			isa = PBXGroup;
+			children = (
+				F0444CB51E83CC79003B7736 /* mvp.vsh.c */,
+			);
+			path = vsh;
+			sourceTree = "<group>";
+		};
+		F0444CC91E83CC79003B7736 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				F0444CCA1E83CC79003B7736 /* ijksdl_ios.h */,
+				F0444CCB1E83CC79003B7736 /* ijksdl_vout_overlay_videotoolbox.h */,
+				F0444CCC1E83CC79003B7736 /* ijksdl_vout_overlay_videotoolbox.m */,
+				F0444CCD1E83CC79003B7736 /* IJKSDLGLView.h */,
+				F0444CCE1E83CC79003B7736 /* IJKSDLGLView.m */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		F0D52DB01E8377BC00A19452 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F0444CE21E83CF7B003B7736 /* NTESGLView.h */,
+				F0444CE31E83CF7B003B7736 /* NTESGLView.m */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F00D02C01E822E0C004C8CAA /* DuoFang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00D02EE1E822E0C004C8CAA /* Build configuration list for PBXNativeTarget "DuoFang" */;
+			buildPhases = (
+				2EDFFC8A8DDA28DE579FE002 /* [CP] Check Pods Manifest.lock */,
+				F00D02BD1E822E0C004C8CAA /* Sources */,
+				F00D02BE1E822E0C004C8CAA /* Frameworks */,
+				F00D02BF1E822E0C004C8CAA /* Resources */,
+				45A410F4DC7BC3A85AED2B8D /* [CP] Embed Pods Frameworks */,
+				736DA80FD3F9B172DD1A629B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DuoFang;
+			productName = DuoFang;
+			productReference = F00D02C11E822E0C004C8CAA /* DuoFang.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F00D02D91E822E0C004C8CAA /* DuoFangTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00D02F11E822E0C004C8CAA /* Build configuration list for PBXNativeTarget "DuoFangTests" */;
+			buildPhases = (
+				F00D02D61E822E0C004C8CAA /* Sources */,
+				F00D02D71E822E0C004C8CAA /* Frameworks */,
+				F00D02D81E822E0C004C8CAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F00D02DC1E822E0C004C8CAA /* PBXTargetDependency */,
+			);
+			name = DuoFangTests;
+			productName = DuoFangTests;
+			productReference = F00D02DA1E822E0C004C8CAA /* DuoFangTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F00D02E41E822E0C004C8CAA /* DuoFangUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F00D02F41E822E0C004C8CAA /* Build configuration list for PBXNativeTarget "DuoFangUITests" */;
+			buildPhases = (
+				F00D02E11E822E0C004C8CAA /* Sources */,
+				F00D02E21E822E0C004C8CAA /* Frameworks */,
+				F00D02E31E822E0C004C8CAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F00D02E71E822E0C004C8CAA /* PBXTargetDependency */,
+			);
+			name = DuoFangUITests;
+			productName = DuoFangUITests;
+			productReference = F00D02E51E822E0C004C8CAA /* DuoFangUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F00D02B91E822E0C004C8CAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Zhuge_Su;
+				TargetAttributes = {
+					F00D02C01E822E0C004C8CAA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J5C6HPKH8U;
+						ProvisioningStyle = Automatic;
+					};
+					F00D02D91E822E0C004C8CAA = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F00D02C01E822E0C004C8CAA;
+					};
+					F00D02E41E822E0C004C8CAA = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F00D02C01E822E0C004C8CAA;
+					};
+				};
+			};
+			buildConfigurationList = F00D02BC1E822E0C004C8CAA /* Build configuration list for PBXProject "DuoFang" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F00D02B81E822E0C004C8CAA;
+			productRefGroup = F00D02C21E822E0C004C8CAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F00D02C01E822E0C004C8CAA /* DuoFang */,
+				F00D02D91E822E0C004C8CAA /* DuoFangTests */,
+				F00D02E41E822E0C004C8CAA /* DuoFangUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F00D02BF1E822E0C004C8CAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00D02D41E822E0C004C8CAA /* LaunchScreen.storyboard in Resources */,
+				F00D02D11E822E0C004C8CAA /* Assets.xcassets in Resources */,
+				F00D02CF1E822E0C004C8CAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00D02D81E822E0C004C8CAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00D02E31E822E0C004C8CAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EDFFC8A8DDA28DE579FE002 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		45A410F4DC7BC3A85AED2B8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DuoFang/Pods-DuoFang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		736DA80FD3F9B172DD1A629B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DuoFang/Pods-DuoFang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F00D02BD1E822E0C004C8CAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0444CD91E83CC79003B7736 /* renderer_yuv420sp_vtb.m in Sources */,
+				F00D02CC1E822E0C004C8CAA /* ViewController.m in Sources */,
+				F0444CE41E83CF7B003B7736 /* NTESGLView.m in Sources */,
+				F0444CD01E83CC79003B7736 /* common.c in Sources */,
+				F0444CDC1E83CC79003B7736 /* mvp.vsh.c in Sources */,
+				F0444CD51E83CC79003B7736 /* renderer.c in Sources */,
+				F0444CDB1E83CC79003B7736 /* shader.c in Sources */,
+				F00D02C91E822E0C004C8CAA /* AppDelegate.m in Sources */,
+				F0E74E511E825A7C00CAEC66 /* PermissionTool.m in Sources */,
+				F0444CE11E83CC79003B7736 /* IJKSDLGLView.m in Sources */,
+				F0444CD21E83CC79003B7736 /* yuv420p.fsh.c in Sources */,
+				F0444CD11E83CC79003B7736 /* rgb.fsh.c in Sources */,
+				F0444CCF1E83CC79003B7736 /* color.c in Sources */,
+				F0444CD31E83CC79003B7736 /* yuv420sp.fsh.c in Sources */,
+				F0444CDF1E83CC79003B7736 /* ijksdl_timer.c in Sources */,
+				F0444CDA1E83CC79003B7736 /* renderer_yuv444p10le.c in Sources */,
+				F0444CDE1E83CC79003B7736 /* ijksdl_stdinc.c in Sources */,
+				F0444CD61E83CC79003B7736 /* renderer_rgb.c in Sources */,
+				F0444CD41E83CC79003B7736 /* yuv444p10le.fsh.c in Sources */,
+				F0444CD81E83CC79003B7736 /* renderer_yuv420sp.c in Sources */,
+				F00D02C61E822E0C004C8CAA /* main.m in Sources */,
+				F00D03041E82391C004C8CAA /* VideoController.m in Sources */,
+				F0444CDD1E83CC79003B7736 /* ijksdl_mutex.c in Sources */,
+				F0444CD71E83CC79003B7736 /* renderer_yuv420p.c in Sources */,
+				F0444CE01E83CC79003B7736 /* ijksdl_vout_overlay_videotoolbox.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00D02D61E822E0C004C8CAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00D02DF1E822E0C004C8CAA /* DuoFangTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F00D02E11E822E0C004C8CAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F00D02EA1E822E0C004C8CAA /* DuoFangUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F00D02DC1E822E0C004C8CAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F00D02C01E822E0C004C8CAA /* DuoFang */;
+			targetProxy = F00D02DB1E822E0C004C8CAA /* PBXContainerItemProxy */;
+		};
+		F00D02E71E822E0C004C8CAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F00D02C01E822E0C004C8CAA /* DuoFang */;
+			targetProxy = F00D02E61E822E0C004C8CAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F00D02CD1E822E0C004C8CAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F00D02CE1E822E0C004C8CAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F00D02D21E822E0C004C8CAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F00D02D31E822E0C004C8CAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F00D02EC1E822E0C004C8CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F00D02ED1E822E0C004C8CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F00D02EF1E822E0C004C8CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 691326DFE4D166E967FB56D2 /* Pods-DuoFang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5C6HPKH8U;
+				ENABLE_BITCODE = YES;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DuoFang/Classes/GlobeClass/MSUPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/NIMSDK\"",
+					"\"$(SRCROOT)/DuoFang\"",
+				);
+				INFOPLIST_FILE = DuoFang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/NIMSDK/NIMAVChat/Libs\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/NIMSDK/NIMSDK/Libs\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"aacplus\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"event\"",
+					"-l\"nio\"",
+					"-l\"nts\"",
+					"-l\"nvs\"",
+					"-l\"openh264\"",
+					"-l\"opus\"",
+					"-l\"sqlite3.0\"",
+					"-l\"ssl\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"NIMAVChat\"",
+					"-framework",
+					"\"NIMSDK\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"VideoToolbox\"",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Mn-Su.DuoFang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F00D02F01E822E0C004C8CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F680876314D3EE3C78F9E0D0 /* Pods-DuoFang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J5C6HPKH8U;
+				ENABLE_BITCODE = YES;
+				GCC_INPUT_FILETYPE = sourcecode.c.objc;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/DuoFang/Classes/GlobeClass/MSUPrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/NIMSDK\"",
+					"\"$(SRCROOT)/DuoFang\"",
+				);
+				INFOPLIST_FILE = DuoFang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/NIMSDK/NIMAVChat/Libs\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/NIMSDK/NIMSDK/Libs\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"aacplus\"",
+					"-l\"c++\"",
+					"-l\"crypto\"",
+					"-l\"event\"",
+					"-l\"nio\"",
+					"-l\"nts\"",
+					"-l\"nvs\"",
+					"-l\"openh264\"",
+					"-l\"opus\"",
+					"-l\"sqlite3.0\"",
+					"-l\"ssl\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"NIMAVChat\"",
+					"-framework",
+					"\"NIMSDK\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"VideoToolbox\"",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Mn-Su.DuoFang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F00D02F21E822E0C004C8CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DuoFangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mn-Su.DuoFangTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuoFang.app/DuoFang";
+			};
+			name = Debug;
+		};
+		F00D02F31E822E0C004C8CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DuoFangTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mn-Su.DuoFangTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DuoFang.app/DuoFang";
+			};
+			name = Release;
+		};
+		F00D02F51E822E0C004C8CAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DuoFangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mn-Su.DuoFangUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DuoFang;
+			};
+			name = Debug;
+		};
+		F00D02F61E822E0C004C8CAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DuoFangUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mn-Su.DuoFangUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DuoFang;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F00D02BC1E822E0C004C8CAA /* Build configuration list for PBXProject "DuoFang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00D02EC1E822E0C004C8CAA /* Debug */,
+				F00D02ED1E822E0C004C8CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00D02EE1E822E0C004C8CAA /* Build configuration list for PBXNativeTarget "DuoFang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00D02EF1E822E0C004C8CAA /* Debug */,
+				F00D02F01E822E0C004C8CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00D02F11E822E0C004C8CAA /* Build configuration list for PBXNativeTarget "DuoFangTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00D02F21E822E0C004C8CAA /* Debug */,
+				F00D02F31E822E0C004C8CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F00D02F41E822E0C004C8CAA /* Build configuration list for PBXNativeTarget "DuoFangUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F00D02F51E822E0C004C8CAA /* Debug */,
+				F00D02F61E822E0C004C8CAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F00D02B91E822E0C004C8CAA /* Project object */;
+}
