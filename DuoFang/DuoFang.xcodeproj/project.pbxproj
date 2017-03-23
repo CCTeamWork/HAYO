@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5F7D12317B8684BA93CB583A /* libPods-DuoFang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0166B36D11D3021143A932A7 /* libPods-DuoFang.a */; };
 		D7E40F6B1E83F876009CD3AF /* LoginOrRegist.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */; };
+		D7E40F6E1E83F93B009CD3AF /* NIMServerAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E40F6D1E83F93B009CD3AF /* NIMServerAPI.m */; };
+		D7E40F711E83F9A3009CD3AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E40F701E83F9A3009CD3AF /* ViewController.m */; };
 		F00D02C61E822E0C004C8CAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C51E822E0C004C8CAA /* main.m */; };
 		F00D02C91E822E0C004C8CAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C81E822E0C004C8CAA /* AppDelegate.m */; };
 		F00D02CF1E822E0C004C8CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00D02CD1E822E0C004C8CAA /* Main.storyboard */; };
@@ -62,6 +64,10 @@
 		691326DFE4D166E967FB56D2 /* Pods-DuoFang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoFang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DuoFang/Pods-DuoFang.debug.xcconfig"; sourceTree = "<group>"; };
 		D7E40F691E83F876009CD3AF /* LoginOrRegist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOrRegist.h; sourceTree = "<group>"; };
 		D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOrRegist.m; sourceTree = "<group>"; };
+		D7E40F6C1E83F93B009CD3AF /* NIMServerAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIMServerAPI.h; sourceTree = "<group>"; };
+		D7E40F6D1E83F93B009CD3AF /* NIMServerAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIMServerAPI.m; sourceTree = "<group>"; };
+		D7E40F6F1E83F9A3009CD3AF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D7E40F701E83F9A3009CD3AF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F00D02C11E822E0C004C8CAA /* DuoFang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoFang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00D02C51E822E0C004C8CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F00D02C71E822E0C004C8CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 		D7E40F681E83F86D009CD3AF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D7E40F6C1E83F93B009CD3AF /* NIMServerAPI.h */,
+				D7E40F6D1E83F93B009CD3AF /* NIMServerAPI.m */,
 				D7E40F691E83F876009CD3AF /* LoginOrRegist.h */,
 				D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */,
 			);
@@ -206,6 +214,8 @@
 				F00D02FA1E8238E4004C8CAA /* Classes */,
 				F00D02C71E822E0C004C8CAA /* AppDelegate.h */,
 				F00D02C81E822E0C004C8CAA /* AppDelegate.m */,
+				D7E40F6F1E83F9A3009CD3AF /* ViewController.h */,
+				D7E40F701E83F9A3009CD3AF /* ViewController.m */,
 				F00D02CD1E822E0C004C8CAA /* Main.storyboard */,
 				F00D02D01E822E0C004C8CAA /* Assets.xcassets */,
 				F00D02D21E822E0C004C8CAA /* LaunchScreen.storyboard */,
@@ -552,6 +562,7 @@
 				F00D02C91E822E0C004C8CAA /* AppDelegate.m in Sources */,
 				F0E74E511E825A7C00CAEC66 /* PermissionTool.m in Sources */,
 				F0444CE11E83CC79003B7736 /* IJKSDLGLView.m in Sources */,
+				D7E40F711E83F9A3009CD3AF /* ViewController.m in Sources */,
 				F0444CD21E83CC79003B7736 /* yuv420p.fsh.c in Sources */,
 				F0444CD11E83CC79003B7736 /* rgb.fsh.c in Sources */,
 				F0444CCF1E83CC79003B7736 /* color.c in Sources */,
@@ -561,6 +572,7 @@
 				F0444CDA1E83CC79003B7736 /* renderer_yuv444p10le.c in Sources */,
 				F0444CDE1E83CC79003B7736 /* ijksdl_stdinc.c in Sources */,
 				F0444CD61E83CC79003B7736 /* renderer_rgb.c in Sources */,
+				D7E40F6E1E83F93B009CD3AF /* NIMServerAPI.m in Sources */,
 				F0444CD41E83CC79003B7736 /* yuv444p10le.fsh.c in Sources */,
 				F0444CD81E83CC79003B7736 /* renderer_yuv420sp.c in Sources */,
 				F00D02C61E822E0C004C8CAA /* main.m in Sources */,
