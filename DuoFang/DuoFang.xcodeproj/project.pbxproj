@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5F7D12317B8684BA93CB583A /* libPods-DuoFang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0166B36D11D3021143A932A7 /* libPods-DuoFang.a */; };
+		D7E40F6B1E83F876009CD3AF /* LoginOrRegist.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */; };
 		F00D02C61E822E0C004C8CAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C51E822E0C004C8CAA /* main.m */; };
 		F00D02C91E822E0C004C8CAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02C81E822E0C004C8CAA /* AppDelegate.m */; };
-		F00D02CC1E822E0C004C8CAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D02CB1E822E0C004C8CAA /* ViewController.m */; };
 		F00D02CF1E822E0C004C8CAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00D02CD1E822E0C004C8CAA /* Main.storyboard */; };
 		F00D02D11E822E0C004C8CAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F00D02D01E822E0C004C8CAA /* Assets.xcassets */; };
 		F00D02D41E822E0C004C8CAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F00D02D21E822E0C004C8CAA /* LaunchScreen.storyboard */; };
@@ -60,12 +60,12 @@
 /* Begin PBXFileReference section */
 		0166B36D11D3021143A932A7 /* libPods-DuoFang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DuoFang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		691326DFE4D166E967FB56D2 /* Pods-DuoFang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DuoFang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DuoFang/Pods-DuoFang.debug.xcconfig"; sourceTree = "<group>"; };
+		D7E40F691E83F876009CD3AF /* LoginOrRegist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOrRegist.h; sourceTree = "<group>"; };
+		D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOrRegist.m; sourceTree = "<group>"; };
 		F00D02C11E822E0C004C8CAA /* DuoFang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DuoFang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F00D02C51E822E0C004C8CAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F00D02C71E822E0C004C8CAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F00D02C81E822E0C004C8CAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F00D02CA1E822E0C004C8CAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../ViewController.h; sourceTree = "<group>"; };
-		F00D02CB1E822E0C004C8CAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../ViewController.m; sourceTree = "<group>"; };
 		F00D02CE1E822E0C004C8CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F00D02D01E822E0C004C8CAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F00D02D31E822E0C004C8CAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -168,6 +168,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D7E40F681E83F86D009CD3AF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D7E40F691E83F876009CD3AF /* LoginOrRegist.h */,
+				D7E40F6A1E83F876009CD3AF /* LoginOrRegist.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F00D02B81E822E0C004C8CAA = {
 			isa = PBXGroup;
 			children = (
@@ -235,9 +244,9 @@
 		F00D02FA1E8238E4004C8CAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D7E40F681E83F86D009CD3AF /* Login */,
 				F0D52DB01E8377BC00A19452 /* Framework */,
 				F00D02FB1E8238E4004C8CAA /* GlobeClass */,
-				F00D02FD1E8238E4004C8CAA /* Login */,
 				F00D02FE1E8238E4004C8CAA /* Video */,
 			);
 			path = Classes;
@@ -251,15 +260,6 @@
 				F0D52DF01E837A5800A19452 /* MSUPrefixHeader.pch */,
 			);
 			path = GlobeClass;
-			sourceTree = "<group>";
-		};
-		F00D02FD1E8238E4004C8CAA /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				F00D02CA1E822E0C004C8CAA /* ViewController.h */,
-				F00D02CB1E822E0C004C8CAA /* ViewController.m */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		F00D02FE1E8238E4004C8CAA /* Video */ = {
@@ -428,7 +428,7 @@
 				TargetAttributes = {
 					F00D02C01E822E0C004C8CAA = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = J5C6HPKH8U;
+						DevelopmentTeam = HV78NKBU8W;
 						ProvisioningStyle = Automatic;
 					};
 					F00D02D91E822E0C004C8CAA = {
@@ -544,7 +544,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0444CD91E83CC79003B7736 /* renderer_yuv420sp_vtb.m in Sources */,
-				F00D02CC1E822E0C004C8CAA /* ViewController.m in Sources */,
 				F0444CE41E83CF7B003B7736 /* NTESGLView.m in Sources */,
 				F0444CD01E83CC79003B7736 /* common.c in Sources */,
 				F0444CDC1E83CC79003B7736 /* mvp.vsh.c in Sources */,
@@ -556,6 +555,7 @@
 				F0444CD21E83CC79003B7736 /* yuv420p.fsh.c in Sources */,
 				F0444CD11E83CC79003B7736 /* rgb.fsh.c in Sources */,
 				F0444CCF1E83CC79003B7736 /* color.c in Sources */,
+				D7E40F6B1E83F876009CD3AF /* LoginOrRegist.m in Sources */,
 				F0444CD31E83CC79003B7736 /* yuv420sp.fsh.c in Sources */,
 				F0444CDF1E83CC79003B7736 /* ijksdl_timer.c in Sources */,
 				F0444CDA1E83CC79003B7736 /* renderer_yuv444p10le.c in Sources */,
@@ -717,7 +717,7 @@
 			baseConfigurationReference = 691326DFE4D166E967FB56D2 /* Pods-DuoFang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5C6HPKH8U;
+				DEVELOPMENT_TEAM = HV78NKBU8W;
 				ENABLE_BITCODE = YES;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -780,7 +780,7 @@
 			baseConfigurationReference = F680876314D3EE3C78F9E0D0 /* Pods-DuoFang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = J5C6HPKH8U;
+				DEVELOPMENT_TEAM = HV78NKBU8W;
 				ENABLE_BITCODE = YES;
 				GCC_INPUT_FILETYPE = sourcecode.c.objc;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
