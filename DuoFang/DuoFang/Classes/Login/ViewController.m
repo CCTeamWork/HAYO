@@ -36,7 +36,6 @@
 
     self.videoView = [[NTESGLView alloc] initWithFrame:CGRectZero];
     _videoView.frame =CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    _videoView.backgroundColor =[UIColor clearColor];
     [self.view addSubview:self.videoView];
     
     [self btn1Login];
@@ -175,6 +174,9 @@
 - (void)leavBtnClick:(UIButton *)sender{
     [self MSUNetCallManagerLeaveMeeting];
     [sender removeFromSuperview];
+    [_localVideoLayer removeFromSuperlayer];
+    _videoView.backgroundColor =[UIColor clearColor];
+    _videoView.layer.backgroundColor =(__bridge CGColorRef _Nullable)([UIColor clearColor]);
 }
 
 #pragma mark - 方法实现
