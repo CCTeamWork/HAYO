@@ -36,6 +36,7 @@
 
     self.videoView = [[NTESGLView alloc] initWithFrame:CGRectZero];
     _videoView.frame =CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    _videoView.backgroundColor =[UIColor clearColor];
     [self.view addSubview:self.videoView];
     
     [self btn1Login];
@@ -347,9 +348,6 @@
 - (void)onLocalPreviewReady:(CALayer *)layer {
     _localVideoLayer = layer;
     layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    for (CALayer *layer in _videoView.layer.sublayers) {
-        layer.hidden =YES;
-    }
     [_videoView.layer addSublayer:layer];
 
 
