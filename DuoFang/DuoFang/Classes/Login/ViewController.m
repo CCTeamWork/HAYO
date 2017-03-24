@@ -29,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor brownColor];
     
@@ -167,15 +166,14 @@
     leavBtn.backgroundColor = [UIColor blueColor];
     [leavBtn setTitle:@"离开会议" forState:UIControlStateNormal];
     [leavBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:leavBtn];
     [leavBtn addTarget:self action:@selector(leavBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:leavBtn];
 }
 
 - (void)leavBtnClick:(UIButton *)sender{
     [self MSUNetCallManagerLeaveMeeting];
     [sender removeFromSuperview];
-    [self.videoView removeFromSuperview];
-    self.videoView = nil;
 }
 
 #pragma mark - 方法实现
@@ -229,8 +227,7 @@
                         
                         [self joinNetCallWithRMeeting:meeting];
                         //
-                    }
-                    else {
+                    } else {
                         SLog(@"分配视频会议失败，请重试");
                         //SLog(@"%@",[[NIMSDK sharedSDK] currentLogFilepath]);
                     }
@@ -338,32 +335,34 @@
 }
 
 #pragma mark - 代理方法
-- (void)onRemoteYUVReady:(NSData *)yuvData
-                   width:(NSUInteger)width
-                  height:(NSUInteger)height
-                    from:(NSString *)user {
+- (void)onRemoteYUVReady:(NSData *)yuvData width:(NSUInteger)width  height:(NSUInteger)height from:(NSString *)user {
     SLog(@"=====%@", user);
     SLog(@"====%lu, ====%lu", (unsigned long)width, (unsigned long)height);
-    
+    for (CALayer *layer in _videoView.layer.sublayers) {
+        layer.hidden =YES;
+    }
     [self.videoView render:yuvData width:width height:height];
 }
 
 - (void)onLocalPreviewReady:(CALayer *)layer {
-    if (self.localVideoLayer) {
-        [self.localVideoLayer removeFromSuperlayer];
+    _localVideoLayer = layer;
+    layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    for (CALayer *layer in _videoView.layer.sublayers) {
+        layer.hidden =YES;
     }
-    self.localVideoLayer = layer;
-    layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 300);
-    [self.view.layer insertSublayer:self.localVideoLayer atIndex:0];
+    [_videoView.layer addSublayer:layer];
+
+
     [self createLeaveBtn];
 }
 
 - (void)onUserJoined:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
     NSLog(@"===%@ ==%@", uid, meeting);
 }
-
+/// 有人离开会议回调
 - (void)onUserLeft:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
     NSLog(@"===%@ ==%@", uid, meeting);
+    _localVideoLayer.hidden =NO;
 }
 
 @end
