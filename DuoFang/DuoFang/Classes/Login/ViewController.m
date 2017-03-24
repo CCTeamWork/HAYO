@@ -248,7 +248,6 @@
 */
 - (void)joinNetCallWithRMeeting:(NIMNetCallMeeting *)rMeeting{
     rMeeting.type =NIMNetCallMediaTypeVideo;
-    rMeeting.actor =YES;
     NIMNetCallOption *callOption =[[NIMNetCallOption alloc]init];
     callOption.preferredVideoQuality =NIMNetCallVideoQualityDefault;
     callOption.disableVideoCropping =NO;
