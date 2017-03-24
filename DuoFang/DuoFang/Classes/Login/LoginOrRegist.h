@@ -16,10 +16,18 @@ typedef void(^LoginRegist)(NSString *message, NSInteger code);
 @interface LoginOrRegist : NSObject
 
 /// UserID(云信ID)
-@property(nonatomic, copy) NSString *userID;
+@property(nonatomic, copy , readonly) NSString *userID;
+@property (nonatomic , strong , readonly)NSString *userPswd;
+
 /// 回调block
 @property(nonatomic, copy) LoginRegist result;
 
 + (instancetype)shareUserInfo;
 
+@end
+
+
+@interface LoginOrRegist()
+@property(nonatomic, copy , readwrite) NSString *userID;
+@property (nonatomic , strong , readwrite)NSString *userPswd;
 @end

@@ -20,7 +20,7 @@
 static LoginOrRegist *_userInfo;
 
 @implementation LoginOrRegist {
-    NSString *userPswd;
+    
 }
 
 + (instancetype)shareUserInfo {
@@ -30,7 +30,7 @@ static LoginOrRegist *_userInfo;
     });
     return _userInfo;
 }
-/** 注册
+/** 登录
  *  @param account 账号ID
  *  @param result 登录结果
  */
@@ -43,7 +43,7 @@ static LoginOrRegist *_userInfo;
             _result(@"登录成功", 200);
             if (_userInfo) {
                 _userInfo.userID =account;
-                _userInfo->userPswd =Password;
+                _userInfo.userPswd =Password;
             }
             [_userInfo saveCurrentAccount];
         }
@@ -75,7 +75,7 @@ static LoginOrRegist *_userInfo;
  */
 - (void)saveCurrentAccount {
     [UserDefailt setObject:_userInfo.userID forKey:UserInfo_ID];
-    [UserDefailt setObject:_userInfo->userPswd forKey:UserInfo_Password];
+    [UserDefailt setObject:_userInfo.userPswd forKey:UserInfo_Password];
     [UserDefailt synchronize];
 }
 
