@@ -174,6 +174,8 @@
 - (void)leavBtnClick:(UIButton *)sender{
     [self MSUNetCallManagerLeaveMeeting];
     [sender removeFromSuperview];
+    [self.videoView removeFromSuperview];
+    self.videoView = nil;
 }
 
 #pragma mark - 方法实现
@@ -352,7 +354,7 @@
     }
     self.localVideoLayer = layer;
     layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 300);
-    [self.view.layer insertSublayer:layer atIndex:0];
+    [self.view.layer insertSublayer:self.localVideoLayer atIndex:0];
     [self createLeaveBtn];
 }
 
