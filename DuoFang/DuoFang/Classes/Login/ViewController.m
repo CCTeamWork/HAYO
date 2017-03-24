@@ -35,7 +35,7 @@
     [[NIMAVChatSDK sharedSDK].netCallManager addDelegate:self];
 
     self.videoView = [[NTESGLView alloc] initWithFrame:CGRectZero];
-    _videoView.frame =CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
+    _videoView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     [self.view addSubview:self.videoView];
     
     [self btn1Login];
@@ -284,7 +284,9 @@
 */
 - (void)MSUNetCallManagerCloseVideo{
     [[NIMAVChatSDK sharedSDK].netCallManager setCameraDisable:YES];
-    [[NIMAVChatSDK sharedSDK].netCallManager setMeetingRole:NO];
+    //    [[NIMAVChatSDK sharedSDK].netCallManager setMeetingRole:NO];
+    
+//    [[NIMAVChatSDK sharedSDK].netCallManager setVideoMute:YES forUser:@"abc_123"];;
 }
 
 /*
@@ -292,7 +294,10 @@
 */
 - (void)MSUNetCallManagerOpenVideo{
     [[NIMAVChatSDK sharedSDK].netCallManager setCameraDisable:NO];
-    [[NIMAVChatSDK sharedSDK].netCallManager setMeetingRole:YES];
+    //    [[NIMAVChatSDK sharedSDK].netCallManager setMeetingRole:YES];
+    
+//    [[NIMAVChatSDK sharedSDK].netCallManager setVideoMute:YES forUser:@"abc_123"];;
+
 }
 
 /*
@@ -339,30 +344,35 @@
 
 #pragma mark - 代理方法
 - (void)onRemoteYUVReady:(NSData *)yuvData width:(NSUInteger)width  height:(NSUInteger)height from:(NSString *)user {
-    SLog(@"=====%@", user);
-    SLog(@"====%lu, ====%lu", (unsigned long)width, (unsigned long)height);
-    for (CALayer *layer in _videoView.layer.sublayers) {
-        layer.hidden =YES;
+//    SLog(@"=====%@", user);
+//    SLog(@"====%lu, ====%lu", (unsigned long)width, (unsigned long)height);
+
+    if ([user isEqualToString:@"qwe_gaga"]) {
+        [self.videoView render:yuvData width:width height:height];
     }
-    [self.videoView render:yuvData width:width height:height];
 }
 
 - (void)onLocalPreviewReady:(CALayer *)layer {
-    _localVideoLayer = layer;
+
+    if (self.localVideoLayer) {
+        [self.localVideoLayer removeFromSuperlayer];
+    }
+    self.localVideoLayer = layer;
     layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    [_videoView.layer addSublayer:layer];
+    //    [self.view.layer addSublayer:layer];
+    [self.view.layer insertSublayer:layer atIndex:0];
+    [self createLeaveBtn];
 
 
     [self createLeaveBtn];
 }
 
 - (void)onUserJoined:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
-    NSLog(@"===%@ ==%@", uid, meeting);
+    SLog(@"===%@ ==%@", uid, meeting);
 }
 /// 有人离开会议回调
 - (void)onUserLeft:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
-    NSLog(@"===%@ ==%@", uid, meeting);
-    _localVideoLayer.hidden =NO;
+    SLog(@"===%@ ==%@", uid, meeting);
 }
 
 @end
