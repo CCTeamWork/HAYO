@@ -29,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor brownColor];
     
@@ -351,7 +350,7 @@
         [self.localVideoLayer removeFromSuperlayer];
     }
     self.localVideoLayer = layer;
-    layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 300);
+    layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     [self.view.layer insertSublayer:layer atIndex:0];
     [self createLeaveBtn];
 }
@@ -359,9 +358,10 @@
 - (void)onUserJoined:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
     NSLog(@"===%@ ==%@", uid, meeting);
 }
-
+/// 有人离开会议回调
 - (void)onUserLeft:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
     NSLog(@"===%@ ==%@", uid, meeting);
+    [self onLocalPreviewReady:_videoView.layer];
 }
 
 @end
