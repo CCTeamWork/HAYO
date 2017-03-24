@@ -227,8 +227,7 @@
                         
                         [self joinNetCallWithRMeeting:meeting];
                         //
-                    }
-                    else {
+                    } else {
                         SLog(@"分配视频会议失败，请重试");
                         //SLog(@"%@",[[NIMSDK sharedSDK] currentLogFilepath]);
                     }
@@ -336,24 +335,23 @@
 }
 
 #pragma mark - 代理方法
-- (void)onRemoteYUVReady:(NSData *)yuvData
-                   width:(NSUInteger)width
-                  height:(NSUInteger)height
-                    from:(NSString *)user {
+- (void)onRemoteYUVReady:(NSData *)yuvData width:(NSUInteger)width  height:(NSUInteger)height from:(NSString *)user {
     SLog(@"=====%@", user);
     SLog(@"====%lu, ====%lu", (unsigned long)width, (unsigned long)height);
-    
+    for (CALayer *layer in _videoView.layer.sublayers) {
+        layer.hidden =YES;
+    }
     [self.videoView render:yuvData width:width height:height];
 }
 
 - (void)onLocalPreviewReady:(CALayer *)layer {
+    _localVideoLayer = layer;
+    layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     for (CALayer *layer in _videoView.layer.sublayers) {
-        [layer removeFromSuperlayer];
+        layer.hidden =YES;
     }
-    
     [_videoView.layer addSublayer:layer];
 
-    layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
 
     [self createLeaveBtn];
 }
@@ -364,7 +362,7 @@
 /// 有人离开会议回调
 - (void)onUserLeft:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
     NSLog(@"===%@ ==%@", uid, meeting);
-    [self onLocalPreviewReady:_videoView.layer];
+    _localVideoLayer.hidden =NO;
 }
 
 @end
