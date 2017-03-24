@@ -166,8 +166,9 @@
     leavBtn.backgroundColor = [UIColor blueColor];
     [leavBtn setTitle:@"离开会议" forState:UIControlStateNormal];
     [leavBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:leavBtn];
     [leavBtn addTarget:self action:@selector(leavBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:leavBtn];
 }
 
 - (void)leavBtnClick:(UIButton *)sender{
@@ -346,12 +347,14 @@
 }
 
 - (void)onLocalPreviewReady:(CALayer *)layer {
-    if (self.localVideoLayer) {
-        [self.localVideoLayer removeFromSuperlayer];
+    for (CALayer *layer in _videoView.layer.sublayers) {
+        [layer removeFromSuperlayer];
     }
-    self.localVideoLayer = layer;
+    
+    [_videoView.layer addSublayer:layer];
+
     layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
-    [self.view.layer insertSublayer:layer atIndex:0];
+
     [self createLeaveBtn];
 }
 
