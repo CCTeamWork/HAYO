@@ -35,14 +35,22 @@
     
     [[NIMAVChatSDK sharedSDK].netCallManager addDelegate:self];
 
-    self.videoView = [[NTESGLView alloc] initWithFrame:CGRectMake(50, 50, 300, 300)];
+    self.videoView = [[NTESGLView alloc] initWithFrame:CGRectZero];
+    _videoView.frame =CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     [self.view addSubview:self.videoView];
     
     [self btn1Login];
     [self meetingRoomStatus];
     [self controlVaBtn];
-    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _videoView.contentMode = UIViewContentModeScaleAspectFit;
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
 }
 
 - (void)btn1Login{
@@ -253,8 +261,7 @@
     [[NIMAVChatSDK sharedSDK].netCallManager joinMeeting:rMeeting completion:^(NIMNetCallMeeting * _Nonnull meeting, NSError * _Nonnull error) {
         if (!error) {
             SLog(@"进入成功");
-            
-        }else{
+        } else {
             SLog(@"进入会议失败，请重试\n错误:%@", error);
 
         }
@@ -333,29 +340,28 @@
                    width:(NSUInteger)width
                   height:(NSUInteger)height
                     from:(NSString *)user {
-    //    SLog(@"=====%@", user);
-    //    SLog(@"---%@",yuvData);
+    SLog(@"=====%@", user);
+    SLog(@"====%lu, ====%lu", (unsigned long)width, (unsigned long)height);
+    
     [self.videoView render:yuvData width:width height:height];
 }
 
-- (void)onLocalPreviewReady:(CALayer *)layer
-{
+- (void)onLocalPreviewReady:(CALayer *)layer {
     if (self.localVideoLayer) {
         [self.localVideoLayer removeFromSuperlayer];
     }
     self.localVideoLayer = layer;
-    layer.frame = CGRectMake(50, 50, 300, 300);
-//    [self.view.layer addSublayer:layer];
+    layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 300);
     [self.view.layer insertSublayer:layer atIndex:0];
     [self createLeaveBtn];
 }
 
-- (void)onUserJoined:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting{
-
+- (void)onUserJoined:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
+    NSLog(@"===%@ ==%@", uid, meeting);
 }
 
-- (void)onUserLeft:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting{
-    
+- (void)onUserLeft:(NSString *)uid meeting:(NIMNetCallMeeting *)meeting {
+    NSLog(@"===%@ ==%@", uid, meeting);
 }
 
 @end
