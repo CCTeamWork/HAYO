@@ -7,6 +7,7 @@
 //
 
 #import "VideoController.h"
+#import "LoginOrRegist.h"
 
 @interface VideoController ()
 @property (nonatomic, weak) CALayer *localVideoLayer;

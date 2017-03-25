@@ -18,6 +18,8 @@
 #define ACC2 @"qwe_gaga"
 #define PWD2 @"qwehaha"
 
+#define MeetingName @"821437"
+
 @interface ViewController ()<NIMNetCallManagerDelegate>
 @property (nonatomic , weak) CALayer *localVideoLayer;
 @property (nonatomic , strong)NTESGLView *videoView;
@@ -93,14 +95,14 @@
 
 - (void)staBtnClick:(UIButton *)sender{
     if (sender.tag == 10) {
-        [self reserveMeetingWithRoomId:@"201703220000"];
+        [self reserveMeetingWithRoomId:MeetingName];
     }else{
         [self MSUApplyForJoin];
     }
 }
 
 - (void)controlVaBtn{
-    NSArray *vaArr = @[@"视频开关",@"音频开关",@"听筒切换",@"摄像头切换"];
+    NSArray *vaArr = @[@"视频开关",@"音频开关",@"听筒切换",@"摄像头切换",@"成为主播"];
     for (int i = 0; i < vaArr.count; i++) {
         UIButton *vaBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         vaBtn.frame = CGRectMake(50, 270 + 50*i, 100, 30);
@@ -153,6 +155,14 @@
             }
         }
             break;
+        case 24:
+        {
+            if (sender.selected) {
+                [[NIMAVChatSDK sharedSDK].netCallManager setMeetingRole:YES];
+            }else{
+                [[NIMAVChatSDK sharedSDK].netCallManager setMeetingRole:NO];
+            }
+        }
             
         default:
             break;
@@ -186,10 +196,10 @@
 - (void)MSULogWithAccount:(NSString *)account PWD:(NSString *)pwd{
     [[[NIMSDK sharedSDK] loginManager] login:account token:pwd completion:^(NSError * _Nullable error) {
         if (error) {
-            SLog(@"账户2error=%@", error);
+            SLog(@"账户error=%@", error);
             
         } else {
-            SLog(@"账户2登录成功");
+            SLog(@"账户登录成功");
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             
         }
@@ -204,7 +214,7 @@
         [PermissionTool getMicrophonePermission:^(NSInteger authStatus) {
             if (authStatus == 1) {
                 NIMNetCallMeeting *meeting = [[NIMNetCallMeeting alloc] init];
-                meeting.name = @"201703220000";
+                meeting.name = MeetingName;
                 [self joinNetCallWithRMeeting:meeting];
             }
         }];
@@ -222,7 +232,7 @@
                 meeting.name = roomId;
                 meeting.type = NIMNetCallTypeVideo;
                 meeting.ext = @"哈哈哈哈";
-                meeting.actor =YES;
+                meeting.actor = NO;
         
                 [[NIMAVChatSDK sharedSDK].netCallManager reserveMeeting:meeting completion:^(NIMNetCallMeeting * _Nonnull meeting, NSError * _Nonnull error) {
                     if (!error) {
@@ -293,7 +303,6 @@
 */
 - (void)MSUNetCallManagerOpenVideo{
     [[NIMAVChatSDK sharedSDK].netCallManager setCameraDisable:NO];
-    //    [[NIMAVChatSDK sharedSDK].netCallManager setMeetingRole:YES];
     
 //    [[NIMAVChatSDK sharedSDK].netCallManager setVideoMute:YES forUser:@"abc_123"];;
 
@@ -346,9 +355,10 @@
 //    SLog(@"=====%@", user);
 //    SLog(@"====%lu, ====%lu", (unsigned long)width, (unsigned long)height);
 
-    if ([user isEqualToString:@"qwe_gaga"]) {
-        [self.videoView render:yuvData width:width height:height];
-    }
+//    if ([user isEqualToString:@"qwe_gaga"]) {
+//        [self.videoView render:yuvData width:width height:height];
+//    }
+    [self.videoView render:yuvData width:width height:height];
 }
 
 - (void)onLocalPreviewReady:(CALayer *)layer {
@@ -360,8 +370,6 @@
     layer.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
     //    [self.view.layer addSublayer:layer];
     [self.view.layer insertSublayer:layer atIndex:0];
-    [self createLeaveBtn];
-
 
     [self createLeaveBtn];
 }

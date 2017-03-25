@@ -10,28 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DuoFang/Classes/Login/ViewController.m"
-            timestampString = "512027575.759209"
+            timestampString = "512100704.414928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "-vaBtnClick:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DuoFang/Classes/Login/ViewController.m"
-            timestampString = "512027577.1593"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-vaBtnClick:"
+            startingLineNumber = "370"
+            endingLineNumber = "370"
+            landmarkName = "-onLocalPreviewReady:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
